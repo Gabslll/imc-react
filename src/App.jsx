@@ -10,7 +10,7 @@ function App() {
   const calcular = (e) => {
     e.preventDefault()
     const res = Number(peso) / (Number(altura) ** 2)
-    setResultado(res)
+    setResultado(res.toFixed(2))
   }
   
   return (
@@ -32,7 +32,7 @@ function App() {
           />
         </div>
         <button className='button' onClick={calcular}>Calcular</button>
-        <p>Resultado: {resultado.toFixed(2)}</p>
+        <p>Resultado: {resultado}</p>
       </form>
     </>
   )
